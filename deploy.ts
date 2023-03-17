@@ -14,16 +14,23 @@ async function handleRequest(request: Request): Promise<Response> {
 
   // Serve app.f55877a1.css for "/css/app.f55877a1.css"
   if (url.pathname === "/css/app.f55877a1.css") {
-    const response = await fetch("https://raw.githubusercontent.com/Toasticle/test123/main/css/app.f55877a1.css");
+    const response = await fetch("https://raw.githubusercontent.com/Toasticle/test123/main/app.f55877a1.css");
     const headers = new Headers({ "content-type": "text/css" });
     return new Response(await response.text(), { headers });
   }
 
   // Serve 838.35daa32b.css for "/css/838.35daa32b.css"
   if (url.pathname === "/css/838.35daa32b.css") {
-    const response = await fetch("https://raw.githubusercontent.com/Toasticle/test123/main/css/838.35daa32b.css");
+    const response = await fetch("https://raw.githubusercontent.com/Toasticle/test123/main/838.35daa32b.css");
     const headers = new Headers({ "content-type": "text/css" });
     return new Response(await response.text(), { headers });
+  }
+
+  // Serve logo.0d11fe46.png for "/img/logo.0d11fe46.png"
+  if (url.pathname === "/img/logo.0d11fe46.png") {
+    const response = await fetch("https://raw.githubusercontent.com/Toasticle/test123/main/logo.0d11fe46.png");
+    const headers = new Headers({ "content-type": "image/png" });
+    return new Response(await response.arrayBuffer(), { headers });
   }
 
   // Serve favicon.ico for "/favicon.ico"

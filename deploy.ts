@@ -7,7 +7,7 @@ async function handleRequest(request: Request): Promise<Response> {
 
   // Serve index.html for "/" or "/index.html"
   if (url.pathname === "/" || url.pathname === "/index.html") {
-    const response = await fetch("https://raw.githubusercontent.com/Ntristen49/website/main/index.html?v=5");
+    const response = await fetch("https://raw.githubusercontent.com/Ntristen49/website/main/index.html?v=512312");
     const headers = new Headers({ "content-type": "text/html" });
     return new Response(await response.text(), { headers });
   }
